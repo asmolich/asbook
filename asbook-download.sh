@@ -14,6 +14,8 @@ NAME=${NAME#${NAME%/*}}
 NAME=${NAME%.*}
 NAME=${NAME#/*}
 NAME=${NAME#*-}
+
+[[ -z "${NAME// }" ]] && NAME=tmp
 echo "Downloading into $NAME"
 
 DIR=$PWD
